@@ -2,7 +2,6 @@
 ## A Framework for Alignment-Based Digital Matching Systems
 
 **Author:** Ron Bronson  
-**Affiliation:** Taubman College of Architecture and Urban Planning, University of Michigan; Nava PBC  
 **Date:** December 2025  
 **Version:** 1.0  
 **License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
