@@ -1,0 +1,42 @@
+# Site settings
+title: Frameworks
+description: A collection of draft frameworks for various domains
+author: quarterback
+
+# Build settings
+theme: minima
+markdown:  kramdown
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - README.md
+  - FRAMEWORK. md
+  - TECHNICAL_SPEC.md
+  - civil-economics.md
+  - constrained-priority-matching.md
+  - dara-framework.md
+
+# Collections (optional - for better organization)
+collections:
+  frameworks:
+    output: true
+    permalink: /:collection/:name
+
+# Exclude files from being processed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Optional: Customize the theme
+minima:
+  skin: auto
+  
+# Enable GitHub metadata (shows edit links, etc.)
+repository:  quarterback/frameworks
