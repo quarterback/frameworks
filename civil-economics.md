@@ -32,15 +32,6 @@ The field examines:
 -   Who benefits immediately and who must be present later
 -   How coordination across actors creates value without centralized ownership
 
-Civil economics is not:
-
--   Public choice theory (which models government as rational actors)
--   Political economy (which examines power and economic systems)
--   Welfare economics (which evaluates social wellbeing)
--   Institutional economics (which studies how institutions shape behavior)
-
-Civil economics specifically concerns **the governance of value allocation when civic categories, legitimacy, and public capacity are productive resources**.
-
 ### 1.2 The Ambiguity Economy
 
 **The ambiguity economy** is a recurring operational pattern within civil economics where value extraction occurs through systematic exploitation of institutional seams, jurisdictional gaps, and category ambiguity.
