@@ -1,0 +1,13 @@
+{
+  "buildCommand": "cd assessment-tool && npm install && npm run build",
+  "outputDirectory": "assessment-tool/dist",
+  "devCommand": "cd assessment-tool && npm run dev",
+  "installCommand": "cd assessment-tool && npm install",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
