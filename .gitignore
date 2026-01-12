@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+assessment-tool/node_modules/
+
+# Build outputs
+dist/
+assessment-tool/dist/
+assessment-tool/dist-ssr/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local dev files
+*.local
