@@ -30,8 +30,13 @@ function ResultsPage() {
   const shareUrl = `${window.location.origin}/results/${resultId}`;
 
   const copyShareLink = () => {
-    navigator.clipboard.writeText(shareUrl);
-    alert('Link copied to clipboard!');
+    navigator.clipboard.writeText(shareUrl)
+      .then(() => {
+        alert('Link copied to clipboard!');
+      })
+      .catch(() => {
+        alert('Failed to copy link. Please copy it manually.');
+      });
   };
 
   return (
