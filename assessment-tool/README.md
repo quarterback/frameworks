@@ -2,6 +2,14 @@
 
 A web-based assessment tool that helps people understand their relationship operating style through a modular quiz format. This reveals how someone operates in intimate partnerships after the honeymoon phase ends.
 
+## 🚀 Want to Deploy This?
+
+**See it live in 5 minutes!** → [QUICK_START.md](./QUICK_START.md)
+
+- Deploy to Vercel with one click
+- Deploy to Netlify in minutes
+- Full deployment guide: [DEPLOYMENT.md](./DEPLOYMENT.md)
+
 ## Features
 
 ✅ **Functional Quiz** - 5 modules with 31 questions total  
