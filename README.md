@@ -164,12 +164,12 @@ If you use this framework in your research or implementation, please cite:
 
 ```bibtex
 @misc{spa_framework_2025,
-  author = {[Your Name]},
+  author = {[Ron Bronson]},
   title = {Stratified Preference Allocation (SPA) Framework:
            A Constrained Signaling Mechanism for Bilateral Matching Markets},
   year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/[username]/spa-framework},
+  url = {https://github.com/quarterback/frameworks},
   note = {Licensed under CC BY 4.0}
 }
 ```
