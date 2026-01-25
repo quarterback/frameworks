@@ -467,7 +467,7 @@ Under the following terms:
 
 **Academic Citation (APA):**
 ```
-[Your Name]. (2025). Stratified Preference Allocation (SPA) Framework:
+[Ron Bronson] (2025). Stratified Preference Allocation (SPA) Framework:
 A Constrained Signaling Mechanism for Bilateral Matching Markets.
 GitHub. https://github.com/quarterback/frameworks
 ```
