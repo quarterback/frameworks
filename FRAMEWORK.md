@@ -469,34 +469,20 @@ Under the following terms:
 ```
 [Your Name]. (2025). Stratified Preference Allocation (SPA) Framework:
 A Constrained Signaling Mechanism for Bilateral Matching Markets.
-GitHub. https://github.com/[username]/spa-framework
+GitHub. https://github.com/quarterback/frameworks
 ```
 
 **BibTeX:**
 ```bibtex
 @misc{spa_framework_2025,
-  author = {[Your Name]},
+  author = {[Ron Bronson},
   title = {Stratified Preference Allocation (SPA) Framework: A Constrained Signaling Mechanism for Bilateral Matching Markets},
   year = {2025},
   publisher = {GitHub},
-  url = {https://github.com/[username]/spa-framework},
+  url = {https://github.com/quarterback/frameworks},
   note = {Licensed under CC BY 4.0}
 }
 ```
-
----
-
-## 12. Contributing
-
-This is a living framework. Contributions welcome:
-- Theoretical refinements
-- Empirical validation studies
-- Alternative implementations
-- Application to new domains
-- Case studies and results
-
-**Contact:** [Your contact information]
-
 ---
 
 ## Appendix A: Formal Model
