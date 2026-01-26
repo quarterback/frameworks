@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-text font-sans antialiased;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-text hover:bg-border;
+  }
+
+  .btn-outline {
+    @apply border border-border text-text hover:bg-secondary;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors;
+  }
+
+  .card {
+    @apply bg-primary border border-border rounded-xl p-6;
+  }
+
+  .professional-card {
+    @apply bg-primary border border-border rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-200;
+  }
+
+  .nav-link {
+    @apply text-text/70 hover:text-text transition-colors font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-text;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-accent {
+    @apply bg-accent/10 text-accent;
+  }
+
+  .badge-secondary {
+    @apply bg-secondary text-text/70;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
