@@ -7,6 +7,13 @@ dist/
 assessment-tool/dist/
 assessment-tool/dist-ssr/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
 # Logs
 *.log
 npm-debug.log*

@@ -357,9 +357,10 @@ def calculate_gini(values: List[float]) -> float:
     sorted_values = sorted(values)
     n = len(sorted_values)
     cumsum = np.cumsum(sorted_values)
+    total = sum(sorted_values)
     
     # Gini = (2 * sum(i * x_i)) / (n * sum(x_i)) - (n + 1) / n
-    gini = (2 * sum((i + 1) * x for i, x in enumerate(sorted_values))) / (n * sum(sorted_values)) - (n + 1) / n
+    gini = (2 * sum((i + 1) * x for i, x in enumerate(sorted_values))) / (n * total) - (n + 1) / n
     
     return gini
 
@@ -474,8 +475,11 @@ def main():
     
     # Calculate attention inequality for GS (proposals sent)
     # In GS, women receive all proposals from men who rank them
+    # We approximate by counting how many men have each woman in their top-K preferences
+    # Using K=20 as a reasonable cutoff representing serious consideration
+    GS_ATTENTION_CUTOFF = 20
     attention_b = [
-        sum(1 for p in side_a if receiver.id in p.true_preferences[:20])  # Top 20 approximation
+        sum(1 for p in side_a if receiver.id in p.true_preferences[:GS_ATTENTION_CUTOFF])
         for receiver in side_b
     ]
     gs_gini = calculate_gini(attention_b)

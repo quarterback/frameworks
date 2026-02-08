@@ -15,12 +15,14 @@ Usage:
 
 import sys
 import argparse
+from typing import List
 
 # Check if matplotlib is available
 try:
     import matplotlib.pyplot as plt
     import matplotlib
-    matplotlib.use('Agg')  # Use non-interactive backend
+    # Use non-interactive backend to avoid requiring a display (for server/headless environments)
+    matplotlib.use('Agg')
     HAS_MATPLOTLIB = True
 except ImportError:
     HAS_MATPLOTLIB = False
@@ -86,6 +88,29 @@ def text_line_plot(y_values, title, ylabel, width=60, height=15):
     print()
 
 
+def generate_test_population(base_id_offset: int, size: int, side: str) -> List['Participant']:
+    """
+    Generate a test population with normally distributed desirability.
+    
+    Args:
+        base_id_offset: Starting ID for participants
+        size: Number of participants to generate
+        side: Side identifier ('A' or 'B')
+    
+    Returns:
+        List of Participant objects
+    """
+    from matching_simulation import Participant
+    return [
+        Participant(
+            base_id_offset + i,
+            side,
+            max(0, min(100, np.random.normal(50, 20)))
+        )
+        for i in range(size)
+    ]
+
+
 def run_parameter_sweep():
     """Run simulations across different parameter values"""
     print("\n" + "=" * 80)
@@ -102,10 +127,8 @@ def run_parameter_sweep():
         print(f"   Running k={k}...", end=" ")
         
         # Generate population
-        side_a = [Participant(i, 'A', max(0, min(100, np.random.normal(50, 20)))) 
-                  for i in range(base_pop)]
-        side_b = [Participant(base_pop + i, 'B', max(0, min(100, np.random.normal(50, 20)))) 
-                  for i in range(base_pop)]
+        side_a = generate_test_population(0, base_pop, 'A')
+        side_b = generate_test_population(base_pop, base_pop, 'B')
         
         generate_preferences(side_a, side_b, 0.3)
         generate_preferences(side_b, side_a, 0.3)
@@ -139,10 +162,8 @@ def run_parameter_sweep():
     for corr in corr_values:
         print(f"   Running correlation={corr}...", end=" ")
         
-        side_a = [Participant(i, 'A', max(0, min(100, np.random.normal(50, 20)))) 
-                  for i in range(base_pop)]
-        side_b = [Participant(base_pop + i, 'B', max(0, min(100, np.random.normal(50, 20)))) 
-                  for i in range(base_pop)]
+        side_a = generate_test_population(0, base_pop, 'A')
+        side_b = generate_test_population(base_pop, base_pop, 'B')
         
         generate_preferences(side_a, side_b, corr)
         generate_preferences(side_b, side_a, corr)
@@ -195,10 +216,8 @@ def visualize_spa_dynamics(population=1000, cycles=30, k=15):
     print("=" * 80)
     
     print(f"\nGenerating population (n={population})...")
-    side_a = [Participant(i, 'A', max(0, min(100, np.random.normal(50, 20)))) 
-              for i in range(population)]
-    side_b = [Participant(population + i, 'B', max(0, min(100, np.random.normal(50, 20)))) 
-              for i in range(population)]
+    side_a = generate_test_population(0, population, 'A')
+    side_b = generate_test_population(population, population, 'B')
     
     generate_preferences(side_a, side_b, 0.3)
     generate_preferences(side_b, side_a, 0.3)
